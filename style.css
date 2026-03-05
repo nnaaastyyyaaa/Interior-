@@ -1,0 +1,115 @@
+body {
+  color: rgb(65, 31, 9);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(65, 31, 9) !important;
+}
+
+.navigation {
+  padding: 0;
+  margin-top: 40px;
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 10px;
+  max-width: 700px;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0;
+}
+
+#main-title {
+  font-size: 75px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.main-title {
+  margin: 20px 0 !important;
+}
+
+.pages-list {
+  display: flex;
+  gap: 10px;
+}
+
+.page img {
+  flex-basis: calc((100% - 20px) / 3);
+  height: 400px;
+}
+
+.description {
+  display: flex;
+  gap: 20px;
+}
+
+.text {
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+.advantages li h3,
+.advantages li p {
+  margin: 0;
+}
+
+.scandinavian-image {
+  width: 500px;
+  height: 500px;
+  border-radius: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  background: #f5eadc;
+}
+
+.table-head {
+  background: #cdb79e;
+  font-size: 20px;
+  padding: 12px 16px;
+}
+
+.scandinavian-table td {
+  padding: 12px 16px;
+}
+
+iframe {
+  float: right;
+  margin: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#elements {
+  margin: 40px auto;
+  background: #d6d2cc;
+}
+
+#elements caption {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+#elements th,
+#elements td {
+  padding: 12px 16px;
+  text-align: center;
+}
+
+#elements th {
+  background: #8f8a84;
+  color: white;
+}
