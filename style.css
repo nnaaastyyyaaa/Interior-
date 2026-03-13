@@ -2,6 +2,18 @@ body {
   color: rgb(65, 31, 9);
 }
 
+a:link {
+  color: #463838 !important;
+}
+
+a:visited {
+  color: #917c7c;
+}
+
+a:active {
+  color: #330909;
+}
+
 .navigation {
   padding: 0;
   margin-top: 40px;
@@ -32,9 +44,29 @@ dl > dd {
 }
 
 #main-title {
-  font-size: 75px;
+  position: relative;
+  text-align: center;
   max-width: 700px;
+  font-size: 75px;
   margin: 0 auto;
+}
+
+#main-title::before,
+#main-title::after {
+  position: absolute;
+  bottom: 24px;
+  display: block;
+  content: "";
+  border: 2px solid rgb(65, 31, 9);
+  width: 352px;
+}
+
+#main-title::before {
+  left: 100%;
+}
+
+#main-title::after {
+  right: 100%;
 }
 
 #main-title + p {
@@ -54,6 +86,27 @@ dl > dd {
   gap: 10px;
 }
 
+.image-card {
+  position: relative;
+}
+
+.image-card img:hover {
+  transform: scale(1.08);
+}
+
+.image-card:first-child .image-text {
+  background-color: rgb(214, 205, 192);
+}
+
+.image-text {
+  position: absolute;
+  left: 36%;
+  bottom: -8px;
+  background-color: rgb(223, 206, 183);
+  padding: 4px;
+  border-radius: 7px;
+}
+
 .page img {
   flex-basis: calc((100% - 20px) / 3);
   height: 400px;
@@ -61,7 +114,7 @@ dl > dd {
 
 .description {
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 
 .text {
@@ -91,10 +144,28 @@ dl > dd {
   font-weight: 600;
 }
 
+.top-row {
+  display: flex;
+  gap: 15px;
+}
+
 .scandinavian-image {
   width: 500px;
   height: 500px;
   border-radius: 20px;
+}
+
+.scandinavian-frame {
+  margin: 10px;
+}
+
+.fact-box {
+  top: 80px;
+  right: 40px;
+  width: 250px;
+  background: #e0d9d0;
+  border: 1px solid #b5a48f;
+  padding: 15px;
 }
 
 table {
@@ -138,4 +209,22 @@ iframe {
 #elements th {
   background: #8f8a84;
   color: white;
+}
+
+.industrial-box {
+  float: left;
+  width: 250px;
+  padding: 15px;
+  margin: 20px;
+  border: 1px solid #444;
+  background: #d6d2cc;
+}
+
+.clear {
+  clear: both;
+}
+
+.design-tip-title {
+  text-align: left;
+  margin-left: 20px;
 }
