@@ -19,7 +19,7 @@
     }
     </style>
   <body link="blue" vlink="grey" alink="blue" background="./images/background.jpg" style="background-repeat: no-repeat; background-size: cover; ">
-    <h1 id="main-title">
+    <h1 id="main-title" data-border>
       Interior design styles: Loft, Industrial and Scandinavian
     </h1>
     <p>
@@ -27,13 +27,15 @@
       personality, lifestyle, and atmosphere through space. Each style has its
       own philosophy, materials, and visual language.
     </p>
-    <p>
+    <p data-border>
       On this website, you can explore three popular interior styles:
+       </p>
       <ol class="pages-list">
-        <li class="page"><p><b>Loft</b></p><a href="./loft.html"><img src="./images/loft-example2.jpg" alt=""></a></li>
-        <li class="page"><p><b>Industrial</b></p><a href="./industrial.html"><img src="./images/industrial-example2.jpg" width="512" height="512"></a></li>
-        <li class="page"><p><b>Scandinavian</b></p><a href="./scandinavian.html"><img src="./images/scandinavian-example2.jpg" width="600" height="734"></a></li>
+        <li class="page"><p><b>Loft</b></p><a href="./loft.html"><img src="./images/loft-example2.jpg" data-current="loft" ></a></li>
+        <li class="page"><p><b>Industrial</b></p><a href="./industrial.html"><img src="./images/industrial-example2.jpg" data-current="industrial"  width="512" height="512"></a></li>
+        <li class="page"><p><b>Scandinavian</b></p><a href="./scandinavian.html"><img src="./images/scandinavian-example2.jpg" data-current="scandinavian"  width="600" height="734"></a></li>
       </ol>
+      </p>
       Although they share some similarities, each of them creates <span style="color:rgb(90, 12, 12); font-weight: 500;"> a completely different</span> mood and living experience.
     </p>
     <p>
@@ -41,15 +43,23 @@
       advantages, and design ideas that can inspire your own home
       transformation.
     </p>
+    <button class="choose-style-button">Choose style</button>
+    <button id="quiz">Get quiz</button>
+    <button class="developer-info">Get info about developer</button>
   </body>
   </html>
   <script src="./script/script.js"></script>
   <script>
-    const style = prompt('Enter your favourite interior style');
+    function getQuiz(){
+        const style = prompt('Enter your favourite interior style');
     alert(`You entered ${style}`);
     const confirmed = confirm(`Maybe you like another one?`);
     if(confirmed){
       const style = prompt('Enter your another favourite interior style');
       alert(`You entered ${style}`);
     }
+    }
+
+    quiz.onclick = getQuiz;
+
   </script>

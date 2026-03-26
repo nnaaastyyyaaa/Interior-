@@ -1,11 +1,11 @@
-const oldBackground = document.body.style.backgroundImage;
-const oldColor = document.body.style.backgroundColor;
 const mainTitle = document.getElementById("main-title");
+const chooseBtn = document.querySelector(".choose-style-button");
 const pages = document.querySelectorAll(".page");
+const getDevInfoBtn = document.querySelector(".developer-info");
+const pagesList = document.querySelector(".pages-list");
 
 mainTitle.innerHTML += "(Others will be soon!)";
 
-alert(`Outer html will be: ${mainTitle.outerHTML}`);
 for (const page of pages) {
   const styleName = page.querySelector("p b");
   styleName.textContent = `${styleName.textContent}!`;
@@ -61,7 +61,8 @@ function userDialog() {
     }
   }
 }
-userDialog();
+
+chooseBtn.onclick = userDialog;
 
 function developerInfo(name, surname, position = "developer") {
   alert(`Here is information about web-developer:\n
@@ -69,20 +70,30 @@ function developerInfo(name, surname, position = "developer") {
         surname: ${surname},\n
         position:${position}`);
 }
-developerInfo("Anastasia", "Andrienko");
-
-function showLargerLine(line1, line2) {
-  const larger = line1 > line2 ? line1 : line2;
-  alert(
-    `Compared 2 lines: ${line1} and ${line2}.\n Larger line is: '${larger}'`,
-  );
+function devInfo() {
+  developerInfo("Anastasia", "Andrienko");
 }
-showLargerLine("Kyiv", "Ukraine");
 
-document.body.style.backgroundImage = "none";
-document.body.style.backgroundColor = "pink";
+getDevInfoBtn.addEventListener("click", devInfo);
 
+const handle = {
+  handleEvent(event) {
+    const current = event.target.dataset.current;
+    if (current) {
+      alert(`You clicked ${current} page. ${event.currentTarget}`);
+    }
+  },
+};
+
+document.addEventListener("click", (event) => {
+  const target = event.target;
+  const border = target.closest("[data-border]");
+  if (border) {
+    target.style.border = "3px solid rgb(65, 31, 9)";
+  }
+});
+
+pagesList.addEventListener("click", handle);
 setTimeout(() => {
-  document.body.style.backgroundImage = oldBackground;
-  document.body.style.backgroundColor = oldColor;
-}, 30000);
+  pagesList.removeEventListener("click", handle);
+}, 15000);

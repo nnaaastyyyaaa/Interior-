@@ -107,6 +107,19 @@ dl > dd {
   border-radius: 7px;
 }
 
+.choose-style-button,
+#quiz,
+.developer-info,
+.hide,
+.show {
+  cursor: pointer;
+  border-radius: 15px;
+  color: #381f1f;
+  background-color: #afa297;
+  border: #dbc7ad;
+  padding: 10px;
+}
+
 .page img {
   flex-basis: calc((100% - 20px) / 3);
   height: 400px;
@@ -142,6 +155,12 @@ dl > dd {
   padding: 15px 25px;
   font-size: 18px;
   font-weight: 600;
+}
+
+.dark {
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #978b7a;
 }
 
 .top-row {
