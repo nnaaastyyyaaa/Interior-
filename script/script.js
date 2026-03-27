@@ -76,6 +76,14 @@ function devInfo() {
 
 getDevInfoBtn.addEventListener("click", devInfo);
 
+document.addEventListener("click", (event) => {
+  const target = event.target;
+  const border = target.closest("[data-border]");
+  if (border) {
+    target.style.border = "3px solid rgb(65, 31, 9)";
+  }
+});
+
 const handle = {
   handleEvent(event) {
     const current = event.target.dataset.current;
@@ -84,14 +92,6 @@ const handle = {
     }
   },
 };
-
-document.addEventListener("click", (event) => {
-  const target = event.target;
-  const border = target.closest("[data-border]");
-  if (border) {
-    target.style.border = "3px solid rgb(65, 31, 9)";
-  }
-});
 
 pagesList.addEventListener("click", handle);
 setTimeout(() => {
