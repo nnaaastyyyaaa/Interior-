@@ -225,6 +225,10 @@ iframe {
   text-align: center;
 }
 
+#elements p {
+  padding: 5px;
+}
+
 #elements th {
   background: #8f8a84;
   color: white;
