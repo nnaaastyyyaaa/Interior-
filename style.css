@@ -2,6 +2,11 @@ body {
   color: rgb(65, 31, 9);
 }
 
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
 a:link {
   color: #463838 !important;
 }
@@ -122,7 +127,7 @@ dl > dd {
 
 .page img {
   flex-basis: calc((100% - 20px) / 3);
-  height: 400px;
+  height: 390px;
 }
 
 .description {

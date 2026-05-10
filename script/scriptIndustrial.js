@@ -11,6 +11,7 @@ function moveAt(pageX, pageY) {
   current.style.left = pageX - shiftX + "px";
   current.style.top = pageY - shiftY + "px";
 }
+
 boxes.forEach((box) => {
   box.addEventListener("mousedown", (event) => {
     event.preventDefault();
