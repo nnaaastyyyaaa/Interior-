@@ -83,17 +83,3 @@ document.addEventListener("click", (event) => {
     target.style.border = "3px solid rgb(65, 31, 9)";
   }
 });
-
-const handle = {
-  handleEvent(event) {
-    const current = event.target.dataset.current;
-    if (current) {
-      alert(`You clicked ${current} page. ${event.currentTarget}`);
-    }
-  },
-};
-
-pagesList.addEventListener("click", handle);
-setTimeout(() => {
-  pagesList.removeEventListener("click", handle);
-}, 15000);
